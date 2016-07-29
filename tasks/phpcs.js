@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             parameters = null,
             target = this.target,
             options = this.options(defaults),
-            execute = path.normalize(options.bin),
+            execute = "echo '' | " + path.normalize(options.bin),
             files = [].concat.apply([], this.files.map(function(mapping) { return mapping.src; })).sort();
         
         // removes duplicate files
